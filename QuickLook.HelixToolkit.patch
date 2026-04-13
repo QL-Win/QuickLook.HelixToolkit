@@ -1,26 +1,58 @@
-From aaac1e78f33c92e1b6ec5422b74b0893461817e1 Mon Sep 17 00:00:00 2001
-From: =?UTF-8?q?J=C3=A9r=C3=A9my=20Ansel?=
- <JeremyAnsel@users.noreply.github.com>
-Date: Wed, 12 Nov 2025 16:18:39 +0100
-Subject: [PATCH] Fix avalonia typo
+From 19ca733bd7ff393e446b622637334e70a466cdb3 Mon Sep 17 00:00:00 2001
+From: ema <mccoy39082@163.com>
+Date: Tue, 14 Apr 2026 00:35:51 +0800
+Subject: [PATCH] QuickLook.HelixToolkit.patch
 
 ---
- Source/HelixToolkit.Avalonia.SharpDX/Controls/RenderUtil.cs | 2 +-
- 1 file changed, 1 insertion(+), 1 deletion(-)
+ Source/Directory.Build.props                    | 6 +++---
+ Source/HelixToolkit.Wpf/HelixToolkit.Wpf.csproj | 3 ++-
+ 2 files changed, 5 insertions(+), 4 deletions(-)
 
-diff --git a/Source/HelixToolkit.Avalonia.SharpDX/Controls/RenderUtil.cs b/Source/HelixToolkit.Avalonia.SharpDX/Controls/RenderUtil.cs
-index 01be25822..3858cb4b4 100644
---- a/Source/HelixToolkit.Avalonia.SharpDX/Controls/RenderUtil.cs
-+++ b/Source/HelixToolkit.Avalonia.SharpDX/Controls/RenderUtil.cs
-@@ -1,7 +1,7 @@
- ﻿using SharpDX.Direct3D11;
- using Direct3D11 = global::SharpDX.Direct3D11;
+diff --git a/Source/Directory.Build.props b/Source/Directory.Build.props
+index 7321e50c3..a57bd511c 100644
+--- a/Source/Directory.Build.props
++++ b/Source/Directory.Build.props
+@@ -2,7 +2,7 @@
  
--namespace HelixToolkit.Avalinia.SharpDX;
-+namespace HelixToolkit.Avalonia.SharpDX;
+   <PropertyGroup>
+     <SolutionDir Condition="'$(SolutionDir)'==''">$(MSBuildThisFileDirectory)</SolutionDir>
+-    <Version>3.0.0</Version>
++    <Version>3.1.2</Version>
+     <IsPackable>false</IsPackable>
+     <Description>Helix Toolkit is a collection of 3D components for .NET.</Description>
+     <PackageTags>3D</PackageTags>
+@@ -14,7 +14,7 @@
+     <PackageProjectUrl>http://www.helix-toolkit.org</PackageProjectUrl>
+     <RepositoryUrl>https://github.com/helix-toolkit/helix-toolkit</RepositoryUrl>
+     <RepositoryType>git</RepositoryType>
+-    <PackageIcon>helixtoolkit.png</PackageIcon>
++    <PackageIcon>app.png</PackageIcon>
+     <PackageIconUrl>https://avatars3.githubusercontent.com/u/8432523?s=200&amp;v=4</PackageIconUrl>
+     <PackageReadmeFile>README.md</PackageReadmeFile>
+     <GenerateDocumentationFile>true</GenerateDocumentationFile>
+@@ -45,7 +45,7 @@
+       <Pack>True</Pack>
+       <PackagePath></PackagePath>
+     </None>
+-    <None Include="$(SolutionDir)..\Images\helixtoolkit.png">
++    <None Include="$(SolutionDir)..\..\app.png">
+       <Pack>True</Pack>
+       <PackagePath></PackagePath>
+     </None>
+diff --git a/Source/HelixToolkit.Wpf/HelixToolkit.Wpf.csproj b/Source/HelixToolkit.Wpf/HelixToolkit.Wpf.csproj
+index fc4838c8c..6d8b3575b 100644
+--- a/Source/HelixToolkit.Wpf/HelixToolkit.Wpf.csproj
++++ b/Source/HelixToolkit.Wpf/HelixToolkit.Wpf.csproj
+@@ -1,7 +1,8 @@
+ ﻿<Project Sdk="Microsoft.NET.Sdk">
  
- public static class RenderUtil
- {
+   <PropertyGroup>
+-    <TargetFrameworks>net8.0-windows;net6.0-windows;net48</TargetFrameworks>
++    <TargetFrameworks>net8.0-windows;net6.0-windows;net48;net462</TargetFrameworks>
++    <PackageId>QuickLook.HelixToolkit</PackageId>
+     <LangVersion>12.0</LangVersion>
+     <ImplicitUsings>enable</ImplicitUsings>
+     <Nullable>enable</Nullable>
 -- 
 2.45.2.windows.1
 
