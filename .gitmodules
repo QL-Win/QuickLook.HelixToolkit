@@ -1,0 +1,3 @@
+[submodule "HelixToolkit"]
+	path = HelixToolkit
+	url = https://github.com/helix-toolkit/helix-toolkit/

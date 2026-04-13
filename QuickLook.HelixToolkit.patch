@@ -1,0 +1,26 @@
+From aaac1e78f33c92e1b6ec5422b74b0893461817e1 Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?J=C3=A9r=C3=A9my=20Ansel?=
+ <JeremyAnsel@users.noreply.github.com>
+Date: Wed, 12 Nov 2025 16:18:39 +0100
+Subject: [PATCH] Fix avalonia typo
+
+---
+ Source/HelixToolkit.Avalonia.SharpDX/Controls/RenderUtil.cs | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/Source/HelixToolkit.Avalonia.SharpDX/Controls/RenderUtil.cs b/Source/HelixToolkit.Avalonia.SharpDX/Controls/RenderUtil.cs
+index 01be25822..3858cb4b4 100644
+--- a/Source/HelixToolkit.Avalonia.SharpDX/Controls/RenderUtil.cs
++++ b/Source/HelixToolkit.Avalonia.SharpDX/Controls/RenderUtil.cs
+@@ -1,7 +1,7 @@
+ ﻿using SharpDX.Direct3D11;
+ using Direct3D11 = global::SharpDX.Direct3D11;
+ 
+-namespace HelixToolkit.Avalinia.SharpDX;
++namespace HelixToolkit.Avalonia.SharpDX;
+ 
+ public static class RenderUtil
+ {
+-- 
+2.45.2.windows.1
+
